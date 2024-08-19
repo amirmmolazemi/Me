@@ -1,5 +1,5 @@
 const Services = () => {
-  return <div>Services</div>;
+  return <div>this page is updating .... please comeback 25 august</div>;
 };
 
 export default Services;
