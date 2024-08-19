@@ -1,14 +1,7 @@
 "use client";
 
-import { Item } from "@radix-ui/react-select";
+import stats from "@/constant/stats";
 import CountUp from "react-countup";
-
-const stats = [
-  { num: 3, text: "Years of experience" },
-  { num: 20, text: "Projects Completed" },
-  { num: 10, text: "Technologies mastered" },
-  { num: 200, text: "Code commits" },
-];
 
 const Stats = () => {
   return (

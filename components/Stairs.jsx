@@ -8,7 +8,7 @@ const stairAnimation = {
     top: "100%",
   },
   exit: {
-    top: "0%", // تغییر `exit` به یک شیء
+    top: "0%",
   },
 };
 
