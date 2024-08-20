@@ -1,4 +1,4 @@
-const exprience = {
+const experience = {
   title: "My Exprience",
   description: "My work Exprienced that i learned a lot of things from them to become a happy developer",
   items: [
@@ -15,4 +15,4 @@ const exprience = {
   ],
 };
 
-export default exprience;
+export default experience;

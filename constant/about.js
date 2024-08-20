@@ -4,7 +4,7 @@ const about = {
   info: [
     { fieldName: "Name", fieldValue: "Amirmohammad Molazemi" },
     { fieldName: "Email", fieldValue: "am.molazemi@gmail.com" },
-    { fieldName: "Phone", fieldValue: "(+98)9155274491" },
+    { fieldName: "Phone", fieldValue: "(+98) 9155274491" },
     { fieldName: "Age", fieldValue: "17" },
     { fieldName: "Nationality", fieldValue: "Iran" },
     { fieldName: "Freelance", fieldValue: "Not Now" },
