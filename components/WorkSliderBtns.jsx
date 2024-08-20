@@ -7,11 +7,11 @@ const WorkSliderBtns = ({ containerStyles, btnStyles }) => {
   const swiper = useSwiper();
   return (
     <div className={containerStyles}>
-      <button className={btnStyles}>
-        <PiCaretLeftBold onClick={() => swiper.slidePrev()} />
+      <button className={btnStyles} onClick={() => swiper.slidePrev()}>
+        <PiCaretLeftBold />
       </button>
-      <button className={btnStyles}>
-        <PiCaretRightBold onClick={() => swiper.slideNext()} />
+      <button className={btnStyles} onClick={() => swiper.slideNext()}>
+        <PiCaretRightBold />
       </button>
     </div>
   );
