@@ -1,12 +1,26 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import info from "@/constant/info";
 import { motion } from "framer-motion";
+import info from "@/constant/info";
+import TextInput from "@/components/TextInput";
+import TextArea from "@/components/TextArea";
+import schema from "@/schema/validationSchema";
+import inputs from "@/constant/input";
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = async (data) => {};
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -19,23 +33,33 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-8 bg-[#27272c] rounded-xl">
+            <form
+              className="flex flex-col gap-6 p-8 bg-[#27272c] rounded-xl"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
               <p className="text-white/60">
                 You can send me a message about your position, and I will get
                 back to you after reviewing it.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" placeholder="First Name" />
-                <Input type="text" placeholder="Last Name" />
-                <Input type="email" placeholder="Email Address" />
-                <Input type="tel" placeholder="Phone Number" />
+                {inputs.map((input, index) => (
+                  <TextInput
+                    key={index}
+                    name={input.name}
+                    register={register}
+                    errors={errors}
+                    placeholder={input.placeholder}
+                  />
+                ))}
               </div>
-              <Textarea
-                className="h-[200px]"
+              <TextArea
+                name="message"
+                register={register}
+                errors={errors}
                 placeholder="Type your message here"
               />
-              <Button size="md" className="max-w-[160px]">
+              <Button size="md" className="max-w-[160px]" type="submit">
                 Send Message
               </Button>
             </form>
