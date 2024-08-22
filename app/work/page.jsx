@@ -75,8 +75,8 @@ const Work = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index}>
-                  <div className="md:h-[460px] h-[260px] relative group flex justify-center items-center bg-pink-50/20">
-                    <div className="absolute inset-0 bg-black/10 z-10"></div>
+                  <div className="md:h-[460px] h-[260px] relative group flex justify-center items-center">
+                    <div className="absolute inset-0 z-10"></div>
                     <Image
                       src={project.image}
                       fill

@@ -1,7 +1,8 @@
-// Importing images
 import blogApp from "../public/assets/images/blogApp.png";
 import storeProject from "../public/assets/images/storeProject.png";
 import cryptoApp from "../public/assets/images/cryptoApp.png";
+import divar from "../public/assets/images/divar.png";
+import foodOrdering from "../public/assets/images/foodOrdering.png";
 
 const projects = [
   {
@@ -41,7 +42,7 @@ const projects = [
     description:
       "in this project I tried to develop Divar app using a lot of libraries.",
     stack: [{ name: "React" }, { name: "React-Query" }, { name: "JWT" }],
-    image: storeProject,
+    image: divar,
     github: "https://github.com/amirmmolazemi/Divar",
   },
   {
@@ -51,7 +52,7 @@ const projects = [
     description:
       "in this project you can find some recipes with detail and also filter the data.",
     stack: [{ name: "Next" }, { name: "React" }, { name: "json-server" }],
-    image: storeProject,
+    image: foodOrdering,
     github: "https://github.com/amirmmolazemi/Food-Order-Project",
   },
 ];
