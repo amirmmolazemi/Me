@@ -1,6 +1,6 @@
 "use client";
 
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Photo = () => {
@@ -13,8 +13,25 @@ const Photo = () => {
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
       >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+          }}
+          className="w-[293px] h-[294px] xl:w-[498px] xl:h-[498px] min-blend-lighten absolute"
+        >
+          <Image
+            priority
+            alt="me"
+            fill
+            quality={100}
+            className="object-contain rounded-full"
+            src="/assets/images/me.png"
+          />
+        </motion.div>
         <motion.svg
-          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[510px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +41,7 @@ const Photo = () => {
             cy="253"
             r="250"
             stroke="#00ff99"
-            strokeWidth="4"
+            strokeWidth="6"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
