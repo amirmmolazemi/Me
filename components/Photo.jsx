@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import me from "../public/assets/images/me.png";
 
 const Photo = () => {
   return (
@@ -27,7 +28,7 @@ const Photo = () => {
             fill
             quality={100}
             className="object-contain rounded-full"
-            src="/assets/images/me.png"
+            src={me}
           />
         </motion.div>
         <motion.svg
