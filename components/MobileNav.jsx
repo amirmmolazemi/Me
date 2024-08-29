@@ -1,6 +1,11 @@
 "use client";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 import links from "@/constant/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -20,10 +25,9 @@ const MobileNav = () => {
           </Link>
         </div>
         <div className="flex flex-col justify-center items-center gap-8">
-          {links.map((link, index) => {
-            return (
+          {links.map((link, index) => (
+            <SheetClose asChild key={index}>
               <Link
-                key={index}
                 href={link.path}
                 className={`${
                   link.path === pathname &&
@@ -32,8 +36,8 @@ const MobileNav = () => {
               >
                 {link.name}
               </Link>
-            );
-          })}
+            </SheetClose>
+          ))}
         </div>
       </SheetContent>
     </Sheet>
